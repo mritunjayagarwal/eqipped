@@ -1,0 +1,194 @@
+
+<section class="logi">
+
+
+
+    <h2 class="m-8 text-center text-3xl font-extrabold text-gray-900">
+    Edit Eqipped Product
+    </h2>
+    
+    <section class="container flex mx-auto py-8">
+    <div class="flex w-full">
+    <div style="width: 50rem;" class="w-full">
+    <form class="flex justify-center w-full mx-auto" action="/editproducts" method="post">
+    
+    <div class="pb-12 w-full">
+    
+    <% if(messages.error) { %>
+    <span class="text-red-600 mx-auto text-center font-medium">
+    <%= messages.error%>
+    </span>
+    <% } %>
+    
+    
+    <div class="space-x-0 lg:flex lg:space-x-4 mt-4">
+    <div class="w-full lg:w-80 mt-4">
+    <label for="name" class="block mb-3 text-sm font-semibold text-gray-500">
+    Product Name</label>
+    <input name="name" type="text" required placeholder="Product name..." id="name" value="<%=data.name%>"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    
+    <div class="w-full lg:w-80 mt-4">
+    <label class="block mb-3 text-sm font-semibold text-gray-500" value="<%=data.categoryName%>"
+    for="categoryName">Category Name : "<%=data.categoryName%>"</label>
+    <select name="categoryName"
+    class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+    <option value="">select</option>
+    <option value="Glassware">Glassware</option>
+    <option value="Plasticware">Plasticware</option>
+    <option value="Equipment">Equipment</option>
+    <option value="Cable">Cable</option>
+    <option value="Chemical">Chemical</option>
+    </select>
+    </div>
+    </div>
+    
+    <div class="space-x-0 lg:flex lg:space-x-4 mt-4">
+    
+    
+    <div class="mt-4">
+    <label for="image" class="block mb-3 text-sm font-semibold text-gray-500">Upload
+    Image : "<%=data.image%>"</label>
+    <input id="image" name="image" type="file" disabled value="<%=data.image%>"
+    class="w-full px-5 py-1 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    
+    
+    
+    <div class="w-full lg:w-80 mt-4">
+    <label for="brand" class="block mb-3 text-sm font-semibold text-gray-500">
+    Brand Name</label>
+    <input name="brand" type="text" required placeholder="Brand" id="Brand" value="<%=data.brand%>"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    </div>
+    
+    <div class="space-x-0 lg:flex lg:space-x-4 mt-4">
+    
+    <div class="w-full lg:w-80 mt-4">
+    <label for="price" class="block mb-3 text-sm font-semibold text-gray-500">
+    Price</label>
+    <input name="price" type="text" required placeholder="price" id="price" value="<%=data.price%>"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    
+    <div class="w-full lg:w-80 mt-4">
+    <label for="size" class="block mb-3 text-sm font-semibold text-gray-500">
+    Dimension</label>
+    <input name="size" type="text" required placeholder="size" id="size" value="<%=data.size%>"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    </div>
+    <div class="space-x-0 lg:flex lg:space-x-4 mt-4">
+    
+    <div class="w-full lg:w-80 mt-4">
+    <label for="containedLiquid"
+    class="block mb-3 text-sm font-semibold text-gray-500">
+    Contained Liquid : "<%=data.containedLiquid
+    %>"</label>
+    <div
+    class="flex justify-around align-center block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+    <span class="volumeSwitch"><span class="mr-1">Yes</span><input type="radio"
+    id="containedLiquid" name="containedLiquid" value="Yes"></span>
+    <span class="volumeSwitchOff"><span class="mr-1">No</span><input
+    type="radio" id="containedLiquid" name="containedLiquid"
+    value="No"></span>
+    </div>
+    </div>
+    <div id="volSwitch" class="w-full lg:w-80 mt-4">
+    
+    </div>
+    </div>
+    
+    <div class="space-x-0 lg:flex lg:space-x-4 mt-4">
+    <div class="w-full lg:w-80 mt-4">
+    <label for="piecePerPack"
+    class="block mb-3 text-sm font-semibold text-gray-500">
+    Piece Per Pack</label>
+    <input name="piecePerPack" type="text" required placeholder="Piece per pack" value="<%=data.piecePerPack%>"
+    id="piecePerPack"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    <div class="w-full lg:w-80 mt-4">
+    <label for="netQuantity" class="block mb-3 text-sm font-semibold text-gray-500">
+    Net Quantity</label>
+    <input name="netQuantity" type="text" required placeholder="Net quantity"  value="<%=data.netQuantity%>"
+    id="netQuantity"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    </div>
+    <div class="space-x-0 lg:flex lg:space-x-4 mt-4">
+    <div class="w-full lg:w-80 mt-4">
+    <label for="HSN" class="block mb-3 text-sm font-semibold text-gray-500">
+    HSN Number </label>
+    <input name="HSN" type="text" required placeholder="HSN NO." id="HSN" value="<%=data.HSN%>"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    <div class="w-full lg:w-80 mt-4">
+    <label for="gst" class="block mb-3 text-sm font-semibold text-gray-500">
+    G.S.T Slab of this Product</label>
+    <input name="GST" type="text" required placeholder="GST %" id="GST" value="<%=data.GST%>"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    </div>
+    <div class="space-x-0 lg:flex lg:space-x-4 mt-4">
+    <div class="w-full lg:w-80 mt-4">
+    <label for="itemWeight" class="block mb-3 text-sm font-semibold text-gray-500">
+    Item Weight</label>
+    <input name="itemWeight" type="text" required placeholder="Item Weight" value="<%=data.itemWeight%>"
+    id="Item Weight"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    <div class="w-full lg:w-80 mt-4">
+    <label for="description" class="block mb-3 text-sm font-semibold text-gray-500">
+    Description</label>
+    <input name="description" type="text" required placeholder="Description" value="<%=data.description%>"
+    id="description"
+    class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">
+    </div>
+    </div>
+    
+    <div class="flex justify-center mt-10">
+    <button type="submit"
+    class="group relative 2/3w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Upload
+    </button>
+    </div>
+    
+    </div>
+    <input type="hidden" name="id" value="<%= data.id%>">
+    </form>
+    </div>
+    
+    <div style="width: 35rem;" class="hidden lg:block">
+    <img class="opacity-75" style="z-index: -1; position: absolute; top:12rem; right: 5%; width: 50%;"
+    src="/img/addproduct.png" alt="" srcset="">
+    </div>
+    
+    </div>
+    
+    </section>
+    
+    
+    </section>
+    
+    
+    <script>
+    
+    let vol1 = document.querySelector('.volumeSwitch')
+    let vol2 = document.querySelector('.volumeSwitchOff')
+    
+    vol1.addEventListener("click", switchOn);
+    vol2.addEventListener("click", switchOff);
+    
+    function switchOn() {
+    document.getElementById("volSwitch").innerHTML = `<label for="volume" class="block mb-3 text-sm font-semibold text-gray-500">Volume</label> 
+    <input name="volume" type="text" placeholder="Volume" id="volume" class="w-full px-2 py-2 text-sm border border-gray-300 rounded lg:text-sm focus:outline-none focus:ring-1 focus:ring-blue-600">`;
+    document.getElementById("volSwitch").style.visibility = "visible";
+    }
+    
+    function switchOff() {
+    document.getElementById("volSwitch").style.visibility = "hidden";
+    }
+    
+    </script>

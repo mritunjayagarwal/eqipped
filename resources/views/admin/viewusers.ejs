@@ -1,0 +1,63 @@
+<section class="menu container mx-auto py-8">
+
+    <div class="container mx-auto pt-12">
+        <h1 class="font-bold text-lg mb-4">All Customers</h1>
+        <table class="w-full table-auto bg-white">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2 text-left">Name & Phone</th>
+                    <th class="px-4 py-2 text-left">City and State</th>
+                    <th class="px-4 py-2 text-left">Role</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% data.forEach(function(data){ %>
+
+                    <tr>
+
+                        <td class="border px-4 py-2">
+                            <%= data.name %>
+                        </td>
+        
+                        <td class="border px-4 py-2">
+                            <%= data.city %> 
+                        </td>
+                        <td class="border px-4 py-2">
+                            <%= data.role %>
+                        </td>
+        
+                    </tr>
+
+                <% }) %>
+          
+
+            </tbody>
+        </table>
+    </div>
+
+    
+    <!-- <tr> -->
+            <!-- <% data.forEach(function(data){ %>
+              
+            <tr>
+
+                <td class="border px-4 py-2">
+                    <%= data.name %>
+                </td>
+
+                <td class="border px-4 py-2">
+                    <%= data.city %> 
+                </td>
+                <td class="border px-4 py-2">
+                    <%= data.role %>
+                </td>
+
+            </tr>
+
+                <% }) %> -->
+
+        <!-- </tr> -->
+    
+
+
+</section>

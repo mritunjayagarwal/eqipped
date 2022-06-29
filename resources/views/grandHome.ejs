@@ -1,0 +1,435 @@
+<style>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+</style>
+
+
+    <!-- Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+
+<div style="justify-content: space-evenly;" class="container hideInPhone flex mx-auto">
+
+    <% nashta.forEach(function(nashta){ %>      
+        <a href="/allcategory/products/<%= nashta.pcategory %>">
+    <div data-chai="<%= JSON.stringify(nashta) %>" style="display: flex;" class="sub-cat">        
+        <div class="dropdown inline-block relative flex justify-center items-center" style="padding: 8px; flex-direction: column;">
+            <button class="text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center">
+                <span class="mr-1"><img style="height: 30px; width: 30px" src="/img/melchor.png"/></span>
+                <!-- <svg class=" h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                </svg> -->
+            </button>
+            <h1 class="text-center text-xs"><%= nashta.pcategory %></h1>
+            <ul class="dropdown-menu absolute hidden text-gray-700 pt-1">
+
+            </ul>
+        </div>
+    </div>
+</a>
+    <%  }) %>     
+
+</div>
+
+
+
+
+<div class="container mx-auto py-9 md:py-12 px-4 md:px-6">
+    <div class="flex items-strech justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8">
+        <div class="flex flex-col md:flex-row items-strech justify-between bg-gray-50 dark:bg-gray-800 py-6 px-6 md:py-1 lg:px-8 md:w-8/12 lg:w-7/12 xl:w-8/12 2xl:w-9/12">
+            <div class="flex flex-col justify-center md:w-3/5">
+                <h1 class="text-3xl lg:text-2xl font-semibold text-gray-800 dark:text-white">Best Deal For Laboratory Supplies...</h1>
+                <p class="text-base lg:text-xl text-gray-800 dark:text-white mt-8">
+                    <a href="/allcategory" class="px-4 py-2 ml-10 rounded-full text-white text-sm font-bold btn-primary">Buy Now</a>
+                </p>
+            </div>
+            <div class="md:w-1/2 xl:w-1/2 mt-8 md:mt-0 flex justify-center md:justify-end">
+                <img src="/img/banner.png" alt="bannerUp" class="md:w-26 md:h-26 lg:w-60 lg:h-60" />
+            </div>
+        </div>
+        <div class="md:w-4/12 lg:w-5/12 xl:w-4/12 2xl:w-3/12 bg-gray-50 dark:bg-gray-800 py-6 px-6 md:py-0 md:px-4 lg:px-6 flex flex-col justify-center">
+            <div class="flex flex-col justify-center">
+                <img src="/img/postquery.png" alt="postQueryImg" class="md:w-26 md:h-26 lg:w-56 lg:h-56 mx-auto" />
+                <p class="absolute ml-28 mt-48 text-base lg:text-xl text-gray-800 dark:text-white">
+                    <a href="#" class="px-3 py-2 rounded-lg text-white text-xs btn-primary"><i class="fa-solid fa-book-medical"></i>  Post Your Query</a>
+                </p>
+
+                <!-- <h1 class="text-3xl lg:text-4xl font-semibold text-gray-800 dark:text-white">Game Console</h1>
+                <p class="text-base lg:text-xl text-gray-800 dark:text-white">Save Upto <span class="font-bold">30%</span></p>
+                <img src="https://i.ibb.co/rGfP7mp/Rectangle-59-1.png" alt="" class="md:w-20 md:h-20 lg:w-40 lg:h-40 mx-auto" /> -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<h1 class="heading">Laboratory Equipment</h1>
+
+<section class="container mx-auto p-8 flex flex-wrap justify-around">
+  <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/empty-cart.png" alt="" srcset="">
+      <div class="flex border-box p-4 flex-col">
+          <div class="text-center">Category</div>
+      </div>
+  </div> 
+
+  <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/empty-cart.png" alt="" srcset="">
+      <div class="flex border-box p-4 flex-col">
+          <div class="text-center">Category</div>
+      </div>
+  </div> 
+
+  <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/empty-cart.png" alt="" srcset="">
+      <div class="flex border-box p-4 flex-col">
+          <div class="text-center">Category</div>
+      </div>
+  </div> 
+
+  <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/empty-cart.png" alt="" srcset="">
+      <div class="flex border-box p-4 flex-col">
+          <div class="text-center">Category</div>
+      </div>
+  </div> 
+
+  <!-- <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/empty-cart.png" alt="" srcset="">
+      <div class="flex border-box p-4 flex-col">
+          <div class="text-center">Category</div>
+      </div>
+  </div>  -->
+</section>
+
+
+
+
+
+
+<h1 class="heading">Laboratory Chemicals</h1>
+
+    <section class="container mx-auto p-8 flex flex-wrap justify-around">
+        <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+            <img src="/img/empty-cart.png" alt="" srcset="">
+            <div class="flex border-box p-4 flex-col">
+                <div class="text-center">Category</div>
+            </div>
+        </div> 
+
+        <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+            <img src="/img/empty-cart.png" alt="" srcset="">
+            <div class="flex border-box p-4 flex-col">
+                <div class="text-center">Category</div>
+            </div>
+        </div> 
+
+        <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+            <img src="/img/empty-cart.png" alt="" srcset="">
+            <div class="flex border-box p-4 flex-col">
+                <div class="text-center">Category</div>
+            </div>
+        </div> 
+
+        <div class="flex flex-col h-min w-44 p-1 border-box bg-white rounded xl m-5"> 
+            <img src="/img/empty-cart.png" alt="" srcset="">
+            <div class="flex border-box p-4 flex-col">
+                <div class="text-center">Category</div>
+            </div>
+        </div> 
+
+    </section>
+
+
+
+
+      
+
+  
+<div class="container mx-auto pb-10 py-9 md:py-12 px-4 md:px-6">
+    <div class="flex items-strech justify-center flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 lg:space-x-8">
+        <div class="flex flex-col md:flex-row items-strech justify-between bg-gray-50 dark:bg-gray-800 py-6 px-6 md:py-12 lg:px-12 md:w-9/12 lg:w-8/12 xl:w-9/12 2xl:w-10/12">
+            <div class="flex flex-col justify-center md:w-1/2">
+                <h1 class="text-3xl lg:text-4xl font-semibold text-gray-800 dark:text-white">Best Deal</h1>
+                <p class="text-base lg:text-xl text-gray-800 dark:text-white mt-2">Save upto <span class="font-bold">50%</span></p>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center md:justify-end">
+                <img src="https://i.ibb.co/J2BtZdg/Rectangle-56-1.png" alt="" class="" />
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+
+
+
+
+
+
+
+
+<h1 class="heading">Best Selling</h1>
+<!-- <h1 class="heading">Treanding Near You</h1> -->
+
+
+<!-- ====== Cards Section Start -->
+
+<div class="container mx-auto py-9 md:pt-12 md:px-6">
+    <section class="bg-[#F3F4F6]">
+        <div class="container flex mx-auto">
+           <div class="flex flex-wrap -mx-4">
+              <div class="w-full md:w-1/4 xl:w-1/4 px-4">
+                 <div class="bg-white rounded-lg overflow-hidden mb-1">
+                    <img
+                       src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
+                       alt="image"
+                       class="w-full"
+                       />
+                    <div class="p-5 sm:p-6 md:p-5 xl:p-7 text-center">
+                       <h3  class="
+                       text-dark text-xl
+                       sm:text-[22px]
+                       md:text-xl
+                       lg:text-[22px]
+                       xl:text-xl
+                       2xl:text-[22px]
+                       mb-1
+                       block
+                       hover:text-primary
+                       "
+                       >Templates</h3>
+                    </div>
+                 </div>
+              </div>
+              <div class="w-full md:w-1/4 xl:w-1/4 px-4">
+                 <div class="bg-white rounded-lg overflow-hidden mb-1">
+                    <img
+                       src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg"
+                       alt="image"
+                       class="w-full"
+                       />
+                       <div class="p-5 sm:p-6 md:p-5 xl:p-7 text-center">
+                        <h3  class="
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-1
+                        block
+                        hover:text-primary
+                        "
+                        >Creative</h3>
+                     </div>
+                 </div>
+              </div>
+              <div class="w-full md:w-1/4 xl:w-1/4 px-4">
+                 <div class="bg-white rounded-lg overflow-hidden mb-1">
+                    <img
+                       src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
+                       alt="image"
+                       class="w-full"
+                       />
+                       <div class="p-5 sm:p-6 md:p-5 xl:p-7 text-center">
+                        <h3  class="
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-1
+                        block
+                        hover:text-primary
+                        "
+                        >Themes</h3>
+                     </div>
+                 </div>
+              </div>
+              <div class="w-full md:w-1/4 xl:w-1/4 px-4">
+                 <div class="bg-white rounded-lg overflow-hidden mb-1">
+                    <img
+                       src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
+                       alt="image"
+                       class="w-full"
+                       />
+                       <div class="p-5 sm:p-6 md:p-5 xl:p-7 text-center">
+                        <h3  class="
+                        text-dark text-xl
+                        sm:text-[22px]
+                        md:text-xl
+                        lg:text-[22px]
+                        xl:text-xl
+                        2xl:text-[22px]
+                        mb-1
+                        block
+                        hover:text-primary
+                        "
+                        >Website</h3>
+                     </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </section>
+    </div>
+     <!-- ====== Cards Section End -->
+    
+ 
+
+
+
+   
+
+<h1 class="heading">Latest Products</h1>
+    
+
+<!-- ====== Cards Section Start -->
+
+<div class="container mx-auto py-9 md:pt-12 md:px-6">
+  <section class="lg:pt-[120px] lg:pb-10 bg-[#F3F4F6]">
+      <div class="container flex mx-auto">
+         <div class="flex flex-wrap -mx-4">
+            <div class="w-full md:w-1/4 xl:w-1/4 px-4">
+               <div class="bg-white rounded-lg overflow-hidden mb-10">
+                  <img
+                     src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
+                     alt="image"
+                     class="w-full"
+                     />
+                  <div class="p-5 sm:p-6 md:p-5 xl:p-7 text-center">
+                     <h3  class="
+                     text-dark text-xl
+                     sm:text-[22px]
+                     md:text-xl
+                     lg:text-[22px]
+                     xl:text-xl
+                     2xl:text-[22px]
+                     mb-4
+                     block
+                     hover:text-primary
+                     "
+                     >Templates</h3>
+                  </div>
+               </div>
+            </div>
+            <div class="w-full md:w-1/4 xl:w-1/4 px-4">
+               <div class="bg-white rounded-lg overflow-hidden mb-10">
+                  <img
+                     src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-02.jpg"
+                     alt="image"
+                     class="w-full"
+                     />
+                     <div class="p-5 sm:p-6 md:p-5 xl:p-7 text-center">
+                      <h3  class="
+                      text-dark text-xl
+                      sm:text-[22px]
+                      md:text-xl
+                      lg:text-[22px]
+                      xl:text-xl
+                      2xl:text-[22px]
+                      mb-4
+                      block
+                      hover:text-primary
+                      "
+                      >Creative</h3>
+                   </div>
+               </div>
+            </div>
+            <div class="w-full md:w-1/4 xl:w-1/4 px-4">
+               <div class="bg-white rounded-lg overflow-hidden mb-10">
+                  <img
+                     src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
+                     alt="image"
+                     class="w-full"
+                     />
+                     <div class="p-5 sm:p-6 md:p-5 xl:p-7 text-center">
+                      <h3  class="
+                      text-dark text-xl
+                      sm:text-[22px]
+                      md:text-xl
+                      lg:text-[22px]
+                      xl:text-xl
+                      2xl:text-[22px]
+                      mb-4
+                      block
+                      hover:text-primary
+                      "
+                      >Themes</h3>
+                   </div>
+               </div>
+            </div>
+            <div class="w-full md:w-1/4 xl:w-1/4 px-4">
+               <div class="bg-white rounded-lg overflow-hidden mb-10">
+                  <img
+                     src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-03.jpg"
+                     alt="image"
+                     class="w-full"
+                     />
+                     <div class="p-5 sm:p-6 md:p-5 xl:p-7 text-center">
+                      <h3  class="
+                      text-dark text-xl
+                      sm:text-[22px]
+                      md:text-xl
+                      lg:text-[22px]
+                      xl:text-xl
+                      2xl:text-[22px]
+                      mb-4
+                      block
+                      hover:text-primary
+                      "
+                      >Website</h3>
+                   </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+  </div>
+   <!-- ====== Cards Section End -->
+  
+  
+
+
+
+
+   <h1 class="heading">Brands</h1>
+
+<section class="container mx-auto mb-14 p-8 flex flex-wrap justify-around">
+  <div style="justify-content: center; align-items: center;" class="flex flex-col h-min w-36 p-1 border-box bg-white rounded xl m-5"> 
+    
+      <img src="/img/thermofisher.png" alt="" srcset=""></a>
+  </div> 
+
+  <div style="justify-content: center; align-items: center;" class="flex flex-col h-min w-36 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/remi.png" alt="" srcset="">
+  </div> 
+
+  <div style="justify-content: center; align-items: center;" class="flex flex-col h-min w-36 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/polylab.png" alt="" srcset="">
+  </div> 
+
+  <div style="justify-content: center; align-items: center;" class="flex flex-col h-min w-36 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/borosil.jpg" alt="" srcset="">
+  </div> 
+
+  <div style="justify-content: center; align-items: center;" class="flex flex-col h-min w-36 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/tarson.png" alt="" srcset="">
+  </div> 
+
+  <div style="justify-content: center; align-items: center;" class="flex flex-col h-min w-36 p-1 border-box bg-white rounded xl m-5"> 
+      <img src="/img/merck.svg" alt="" srcset="">
+  </div> 
+</section>
+
+
+
+
+
+

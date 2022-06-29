@@ -1,0 +1,64 @@
+<section class="login">
+
+    <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-md w-full space-y-8">
+        <div>
+          <h2 class="my-2 text-center text-3xl font-extrabold text-gray-900">
+            Add Category
+          </h2>
+  
+        </div>
+        <form class="mt-8 space-y-6" action="/addcategory" method="post" enctype="multipart/form-data">
+  
+         
+            <% if(messages.error) { %>
+                <span class="text-red-600 text-xs mt-1 text-center font-medium">
+                  <%= messages.error%> <%= messages.sucess%>
+                </span>
+                <% } %>
+
+              <div class="rounded-md shadow-sm -space-y-px">
+  
+                <div>
+                  <label for="category" class="block mb-4 text-sm font-semibold text-gray-500">Add Category</label>
+                  <input id="category"  name="category" type="text" autocomplete="category" required
+                    class="appearance-none rounded-none relative block w-full px-3 py-2 border placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:z-10 sm:text-sm"
+                    placeholder="">
+                </div>
+
+                <div class="mt-4">                  
+                  <label for="image" class="block mt-4 mb-3 text-sm font-semibold text-gray-500">Upload
+                    Image</label>
+                  <input id="image"  name="image" type="file" required
+                    class="appearance-none rounded-none relative block w-full px-3 py-2 border placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:z-10 sm:text-sm"
+                    placeholder="">
+                </div>
+
+              </div>
+  
+              <div class="flex items-center justify-between">
+                <div class="text-sm">
+                </div>
+  
+  
+                <div class="flex items-center">
+                  <label for="remember-me" class="ml-2 block font-bold font-medium">
+                  </label>
+                </div>
+  
+              </div>
+  
+              <div>
+                <button type="submit" value="submit"
+                  class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  Create
+                </button>
+              </div>
+        </form>
+        <p class="text-center text-gray-500 text-xs">
+          &copy;2022 Gearloose Labs. All rights reserved.
+        </p>
+      </div>
+    </div>
+  
+  </section>

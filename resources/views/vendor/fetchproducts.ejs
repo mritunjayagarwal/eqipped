@@ -1,0 +1,33 @@
+
+
+
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 row-gap-16">
+    <% chai.forEach(function(chai){ %>
+        <div class="w-full md:w-72 mb-8 mx-auto border-gray-200 border">
+            <!-- <a href="/productDetails/<%= chai.categoryName %>/<%= chai._id %>"> -->
+                <img class="h-40 mb-4 mx-auto" src="/img/<%= chai.image %>" alt="">
+                <div class="text-center">
+                    <h2 class="mb-2 text-lg">
+                        <%= chai.name %>
+                    </h2>
+                    <div>Brand: <span class="size py-1 px-4 rounded-full uppercase text-xs">
+                            <%= chai.brand %>
+                        </span></div>
+                    <div class="flex items-center justify-around mt-4">
+                        <span class="font-bold text-lg">₹<%= chai.price %></span>
+                    </div>
+                </div>
+            <!-- </a> -->
+            <div class="text-center">
+                <div class="flex items-center justify-around mt-2">
+                    <!-- <button class="py-2 px-5 rounded-full flex items-center font-bold">
+                        <span class="ml-4">Delete</span>
+                    </button> -->
+                    <a style="color: red;" class="py-2 px-5 rounded-full flex items-center font-bold" href="/admin/delete/products/<%= chai._id %>">Delete</a>
+                </div>
+            </div>
+        </div>
+
+        <% }) %>
+</div>

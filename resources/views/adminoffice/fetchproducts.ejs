@@ -1,0 +1,17 @@
+<section class="container mx-auto p-8 border flex flex-wrap justify-around">
+    <% product.forEach(function(product){ %>
+
+        <a href="/office/edit/products/<%= product._id %>">
+            <div class="flex flex-col h-min w-56 p-1 border-box bg-white rounded xl m-5 cursor-pointer">
+                <img src="/img/<%= product.image %>" alt="" srcset="">
+                <div class="flex border-box p-1 flex-col">
+                    <div class="text-center">
+                        <%= product.name %>
+                    </div>
+
+                </div>
+            </div>
+        </a> 
+
+        <% }) %>
+</section>

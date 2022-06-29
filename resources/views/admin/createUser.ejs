@@ -1,0 +1,142 @@
+<section class="logi">
+
+    <div id="ideal" class="py-3 px-4 sm:px-6 lg:px-8" style="display: non;">
+
+            
+                <h2 class="m-10 text-center text-3xl font-extrabold text-gray-900">
+                    Sign in to Your Account
+                </h2>
+
+           
+        </div>
+        <div class="w-3/4 flex mx-auto">
+
+            <% if(messages.error) { %>
+            <span class="text-red-600 text-xs mx-auto text-center font-medium">
+              <%= messages.error%>
+            </span>
+            <% } %>
+      
+                    
+            <% if(messages.OnRegisterDone) { %>
+              <script>
+                swal("User Successfully Registered", "Thank you", "success")
+              </script>
+             <% } %>
+      
+      
+          </div>
+
+        <form class="flex justify-center w-full mx-auto" action="/admin/createUser" method="POST">
+            <div class="pb-12 border-gray-500">
+
+
+                    <div class="w-full lg:w-96 mt-4">
+                        <label for="username" class="block mb-3 text-sm font-semibold text-gray-500">
+                            Name</label>
+                        <input id="user-name" name="name" value="Admin Office" type="text" required
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:z-10 sm:text-sm"
+                            >
+                    </div>
+              
+
+                
+
+                   
+
+                    <div class="w-full lg:w-96 mt-4">
+                        <label for="email" class="block mb-3 text-sm font-semibold text-gray-500">
+                            Email</label>
+                        <input id="email-address" name="email" value="<%= messages.email%>" type="email"
+                            autocomplete="email" required
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:z-10 sm:text-sm"
+                            placeholder="employee@admin.com">
+                    </div>
+
+                <div class="w-full lg:w-96 mt-4">
+                        <label for="RegisteredAs" class="block mb-3 text-sm font-semibold text-gray-500">
+                            Register as</label>
+                        <select name="role"
+                            class="appearance-none rounded-none relative block w-full px-3 py-2 border placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:z-10 sm:text-sm">
+                            <option value="customer">User</option>
+                            <option value="vendor">Vendor & Other</option>
+                        </select>
+                    </div>
+
+                    <div class="w-full lg:w-96 mt-4">
+                        <label for="password" class="block mb-3 text-sm font-semibold text-gray-500">
+                            Password
+
+                            
+                        </label>
+                        <input id="password" name="password" type="password" autocomplete="current-password" required
+                            class="appearance-non rounded-none relative block w-full px-3 py-2 border placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:z-10 sm:text-sm"
+                            placeholder="Example: Jai@1105"><span onclick="myFunction()" class="eye"><i
+                                class="fa fa-eye-low-vision"></i></span>
+                    </div>
+
+            
+
+
+
+                   
+        
+                
+
+                    
+
+                    
+               
+
+               
+                
+          
+
+                
+                   
+
+                <div class="mt-1">
+                    <button type="submit"
+                        class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white btn-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+
+                            <svg class="h-5 w-5 text-white-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
+                                fill="currentColor" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        Register
+                    </button>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    </div>
+
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("password");
+
+        if (x.type === 'password') {
+            x.type = "text";
+        }
+        else
+            x.type = "password";
+    }
+</script>

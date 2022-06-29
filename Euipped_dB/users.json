@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "624e878122b6a0039144e8f5"
+  },
+  "name": "Aakash",
+  "phone": 8859,
+  "email": "ak47@gmail.com",
+  "password": "$2b$10$pZAR8zglSfquzUDspfhHpOdeBSIxqbjNnJ4aNjMKWgxYrXLfs5pvy",
+  "institutionName": "SPPU",
+  "designation": "Intern",
+  "address": "Agra Agra",
+  "role": "customer",
+  "createdAt": {
+    "$date": "2022-04-07T06:41:05.152Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-07T06:41:05.152Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "624e8a9b22b6a0039144ead4"
+  },
+  "name": "ak7",
+  "phone": 8888,
+  "email": "ak7@gmail.com",
+  "password": "$2b$10$xhSrlIX.a.2BgyrIwftgC.rVTHTf4ohG7Y0Wsz4PbrLDNPDriuuai",
+  "institutionName": "SPPU",
+  "designation": "Admin",
+  "address": "Mathura GLA",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2022-04-07T06:54:19.079Z"
+  },
+  "updatedAt": {
+    "$date": "2022-04-07T06:54:19.079Z"
+  },
+  "__v": 0
+}]
