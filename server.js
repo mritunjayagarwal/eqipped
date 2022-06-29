@@ -413,7 +413,8 @@ require('./routes/web')(app)
 app.use((req, res) => {
     res.status(404).render('errors/404')
 })
-const server=app.listen(process.env.PORT || 3000, function(){
+// const server=
+app.listen(process.env.PORT || 3000, function(){
     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   });
 // const server = app.listen(PORT, () => {
@@ -422,10 +423,10 @@ const server=app.listen(process.env.PORT || 3000, function(){
 
 // Socket
 
-const io = require('socket.io')(server)
-io.on('connection', (socket) => {
-    // Join
-    socket.on('join', (orderId) => {
-        socket.join(orderId)
-    })
-})
+// const io = require('socket.io')(server)
+// io.on('connection', (socket) => {
+//     // Join
+//     socket.on('join', (orderId) => {
+//         socket.join(orderId)
+//     })
+// })
