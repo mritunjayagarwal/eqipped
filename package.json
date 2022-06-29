@@ -4,6 +4,7 @@
   "description": "This is our realtime food delivery webapp",
   "main": "index.js",
   "scripts": {
+    "start": "node server.js",
     "serve": "node server.js",
     "dev": "nodemon server.js"
   },
