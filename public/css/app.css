@@ -298,6 +298,9 @@ body {
 nav li a {
   transition: all 0.3s ease-in-out;
 }
+nav li a:hover {
+  color: #FE5F1E;
+}
 
 section.hero {
   background: #f8f8f8;

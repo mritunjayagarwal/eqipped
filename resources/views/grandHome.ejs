@@ -10,7 +10,7 @@
 
 
 <div style="justify-content: space-evenly;" class="container hideInPhone flex mx-auto">
-
+<% const Fake = 'https://fakestoreapi.com/products'; %>
     <% nashta.forEach(function(nashta){ %>      
         <a href="/allcategory/products/<%= nashta.pcategory %>">
     <div data-chai="<%= JSON.stringify(nashta) %>" style="display: flex;" class="sub-cat">        
@@ -299,7 +299,7 @@
             <div class="w-full md:w-1/4 xl:w-1/4 px-4">
                <div class="bg-white rounded-lg overflow-hidden mb-10">
                   <img
-                     src="https://cdn.tailgrids.com/1.0/assets/images/cards/card-01/image-01.jpg"
+                     src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
                      alt="image"
                      class="w-full"
                      />
